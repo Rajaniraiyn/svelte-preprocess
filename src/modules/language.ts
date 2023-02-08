@@ -27,6 +27,7 @@ const LANGUAGE_DEFAULTS: Record<string, any> = {
 };
 
 export const ALIAS_MAP = new Map([
+  ['lcss', 'css'],
   ['pcss', 'css'],
   ['postcss', 'css'],
   ['sugarss', 'css'],

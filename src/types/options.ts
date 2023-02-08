@@ -1,3 +1,4 @@
+import type { TransformOptions } from 'lightningcss';
 import type { LegacyStringOptions } from 'sass';
 import type * as postcss from 'postcss';
 import type { Options as PugOptions } from 'pug';
@@ -51,6 +52,12 @@ export type Less = {
   globalVars?: Record<string, string>;
   modifyVars?: Record<string, string>;
 } & ContentModifier;
+
+export type Lightning = Omit<
+  TransformOptions,
+  'filename' | 'code' | 'sourceMap'
+> &
+  ContentModifier;
 
 // from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/stylus/index.d.ts#L1410
 export type Stylus = {
